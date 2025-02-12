@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:my_wallet_app/screens/agregar_gastos.dart';
 import 'package:my_wallet_app/display/screens/pagina_general.dart';
-//import 'package:my_wallet_app/screens/pagina_general.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -10,8 +8,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: 'Poppins',
         colorScheme: const ColorScheme.light(
-          primary: Colors.teal,
+          primary: Color.fromARGB(255, 0, 77, 64),
         ),
         datePickerTheme: const DatePickerThemeData(
           backgroundColor: Colors.white,
@@ -26,8 +25,22 @@ class MainApp extends StatelessWidget {
           titleTextStyle: TextStyle(
             fontSize: 28,
             color: Colors.white,
+            fontFamily: 'Poppins',
           ),
           centerTitle: false,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.teal[900],
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            textStyle: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 19,
+            ),
+          ),
         ),
       ),
       home: PaginaGeneral(),

@@ -18,10 +18,25 @@ class _ListaDeGastosState extends State<ListaDeGastos> {
   @override
   Widget build(BuildContext context) {
     if (widget.detallesDeGasto.isEmpty) {
-      return Center(
-        child: Text(
-          'Usted no tiene gastos guardados',
-        ),
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              textAlign: TextAlign.center,
+              'Usted no tiene gastos guardados',
+              style: TextStyle(
+                fontSize: 25,
+                color: Colors.teal[900],
+              ),
+            ),
+          ),
+          Image.asset(
+            "assets/images/lista.gif",
+            height: 200.0,
+            width: 200.0,
+          ),
+        ],
       );
     }
     return ListView(

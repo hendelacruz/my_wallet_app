@@ -16,6 +16,7 @@ class TarjetaInformacionGasto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.teal[900],
       child: Slidable(
         startActionPane: ActionPane(
           motion: StretchMotion(),
@@ -26,6 +27,7 @@ class TarjetaInformacionGasto extends StatelessWidget {
               }),
               backgroundColor: Colors.red,
               icon: Icons.delete,
+              label: 'Borrar',
             )
           ],
         ),
@@ -35,22 +37,29 @@ class TarjetaInformacionGasto extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               border: Border.all(
-                color: Colors.teal,
+                color: Colors.white,
                 width: 1.0,
               ),
             ),
             child: Text(
               detalleDeGasto.precio.cadenaConSimbolo(),
-              style: TextStyle(fontSize: 25),
+              style: TextStyle(
+                fontSize: 25,
+                color: Colors.white,
+              ),
             ),
           ),
           title: Text(
             detalleDeGasto.descripcion,
-            style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600),
+            style: TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+            ),
           ),
           subtitle: Text(
             detalleDeGasto.fechaDetallada,
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 15, color: Colors.white),
           ),
         ),
       ),

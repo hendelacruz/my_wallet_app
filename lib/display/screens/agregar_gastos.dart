@@ -110,9 +110,11 @@ class _AgregarGastosState extends State<AgregarGastos> {
                 },
                 icon: Icon(
                   Icons.add,
-                  color: Colors.teal,
+                  color: Colors.white,
                 ),
-                label: Text('Agregar'),
+                label: Text(
+                  'Agregar',
+                ),
               )
             ],
           ),
