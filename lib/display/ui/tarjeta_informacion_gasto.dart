@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:my_wallet_app/extensions/string_extension.dart';
 import 'package:my_wallet_app/models/detalle_de_gasto.dart';
 
 class TarjetaInformacionGasto extends StatelessWidget {
@@ -29,9 +30,28 @@ class TarjetaInformacionGasto extends StatelessWidget {
           ],
         ),
         child: ListTile(
-          leading: Text(detalleDeGasto.precio),
-          title: Text(detalleDeGasto.descripcion),
-          subtitle: Text(detalleDeGasto.fechaDetallada),
+          leading: Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              border: Border.all(
+                color: Colors.teal,
+                width: 1.0,
+              ),
+            ),
+            child: Text(
+              detalleDeGasto.precio.cadenaConSimbolo(),
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          title: Text(
+            detalleDeGasto.descripcion,
+            style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600),
+          ),
+          subtitle: Text(
+            detalleDeGasto.fechaDetallada,
+            style: TextStyle(fontSize: 15),
+          ),
         ),
       ),
     );

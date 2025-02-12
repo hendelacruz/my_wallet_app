@@ -5,6 +5,7 @@ class TextPersonalizado extends StatelessWidget {
   const TextPersonalizado({
     super.key,
     required this.label,
+    required this.icon,
     this.autocorrect = true,
     this.controller,
     this.inputFormatters,
@@ -15,6 +16,7 @@ class TextPersonalizado extends StatelessWidget {
   });
 
   final String label;
+  final IconData icon;
   final bool autocorrect;
   final TextEditingController? controller;
   final List<TextInputFormatter>? inputFormatters;
@@ -34,12 +36,14 @@ class TextPersonalizado extends StatelessWidget {
       maxLength: maxLength,
       decoration: InputDecoration(
         icon: Icon(
-          Icons.description,
-          color: Colors.indigo,
+          icon,
+          color: Colors.teal[900],
         ),
         label: Text(
           label,
-          style: TextStyle(color: Colors.indigo),
+          style: TextStyle(
+            color: Colors.teal[900],
+          ),
         ),
       ),
       onTap: onTap,

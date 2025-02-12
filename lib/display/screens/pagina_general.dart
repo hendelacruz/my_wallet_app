@@ -12,7 +12,6 @@ class PaginaGeneral extends StatefulWidget {
 
 class _PaginaGeneralState extends State<PaginaGeneral> {
   final detallesDeGasto = <DetalleDeGasto>[];
-  int bandera = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +28,6 @@ class _PaginaGeneralState extends State<PaginaGeneral> {
                   return AgregarGastos(
                     alAgregar: (detalleDeGasto) {
                       setState(() {
-                        bandera = 1;
                         detallesDeGasto.add(detalleDeGasto);
                         Navigator.pop(context);
                       });
@@ -38,7 +36,10 @@ class _PaginaGeneralState extends State<PaginaGeneral> {
                 },
               );
             },
-            icon: Icon(Icons.add),
+            icon: Icon(
+              Icons.add,
+              //color: Colors.white,
+            ),
           )
         ],
       ),

@@ -51,6 +51,7 @@ class _AgregarGastosState extends State<AgregarGastos> {
             children: [
               TextPersonalizado(
                 label: 'Fecha',
+                icon: Icons.calendar_today,
                 controller: _fechaController,
                 keyboardType: TextInputType.datetime,
                 validator: (valor) =>
@@ -63,6 +64,7 @@ class _AgregarGastosState extends State<AgregarGastos> {
               ),
               TextPersonalizado(
                 label: 'Descripcion',
+                icon: Icons.description,
                 controller: _descripcionController,
                 maxLength: 20,
                 autocorrect: false,
@@ -72,6 +74,7 @@ class _AgregarGastosState extends State<AgregarGastos> {
               ),
               TextPersonalizado(
                 label: 'Precio',
+                icon: Icons.attach_money,
                 controller: _precioController,
                 keyboardType: TextInputType.phone,
                 validator: (valor) {
@@ -107,7 +110,7 @@ class _AgregarGastosState extends State<AgregarGastos> {
                 },
                 icon: Icon(
                   Icons.add,
-                  color: Colors.indigo,
+                  color: Colors.teal,
                 ),
                 label: Text('Agregar'),
               )

@@ -8,7 +8,28 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: const ColorScheme.light(
+          primary: Colors.teal,
+        ),
+        datePickerTheme: const DatePickerThemeData(
+          backgroundColor: Colors.white,
+          dividerColor: Colors.teal,
+          headerBackgroundColor: Colors.teal,
+          headerForegroundColor: Colors.white,
+        ),
+        scaffoldBackgroundColor: Colors.teal[50],
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.teal[900],
+          iconTheme: IconThemeData(color: Colors.white),
+          titleTextStyle: TextStyle(
+            fontSize: 28,
+            color: Colors.white,
+          ),
+          centerTitle: false,
+        ),
+      ),
       home: PaginaGeneral(),
     );
   }
