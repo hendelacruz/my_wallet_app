@@ -28,13 +28,17 @@ class _ListaDeGastosState extends State<ListaDeGastos> {
               style: TextStyle(
                 fontSize: 25,
                 color: Colors.teal[900],
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
+          SizedBox(
+            height: 50,
+          ),
           Image.asset(
-            "assets/images/lista.gif",
-            height: 200.0,
-            width: 200.0,
+            "assets/images/money.gif",
+            height: 300.0,
+            width: 300.0,
           ),
         ],
       );

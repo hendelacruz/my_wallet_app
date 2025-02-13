@@ -10,7 +10,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
         colorScheme: const ColorScheme.light(
-          primary: Color.fromARGB(255, 0, 77, 64),
+          primary: Colors.teal,
         ),
         datePickerTheme: const DatePickerThemeData(
           backgroundColor: Colors.white,
